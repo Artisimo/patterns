@@ -8,7 +8,12 @@ public class TextOutput implements ShapeOutput {
     @Override
     public void printShapes(List<Shape> shapes) {
         for (Shape shape : shapes) {
-            System.out.println(shape.toString());
+            if(shape.getClass().getSimpleName().equals("Circle")) {
+                System.out.println("I am currently printing a circle");
+            }
+            else{
+                System.out.println("I am currently printing a rectangle");
+            }
         }
     }
 }
